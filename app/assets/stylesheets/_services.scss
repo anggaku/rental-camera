@@ -1,0 +1,35 @@
+#services {
+    background-color: $color2;
+
+    .section-heading {
+        color: $text-light;
+    }
+
+    .service-box {
+        max-width: 400px;
+
+        .fa-gem {
+            color: $color4;
+        }
+
+        .fa-paper-plane {
+            color: $color4;
+        }
+
+        .fa-code {
+            color: $color4;
+        }
+
+        .fa-heart {
+            color: $color4;
+        }
+
+        .service-title {
+            color: $text-light;
+        }
+
+        .text-muted {
+            color: $text-mute !important;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro');
+
+/*-------------------
+ about
+--------------------*/
+
+.col-about h6 {
+    color: #003366;
+}
+
+.col-about .text-blue {
+    color: $color4;
+}
+
+.col-about .title {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.col-about .title:after {
+    background: $color4;
+    content: '';
+    display: block;
+    height: 5px;
+    margin: 20px 0;
+    width: 80px;
+}
+
+.col-about h3 {
+    color: grey;
+}
+
+.col-about p {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #263238;
+}
+
+.icon-about .fa-newspaper-o {
+    color: grey;
+}
+
+#about {
+    .col-logo {
+        text-align: center;
+    }
+}

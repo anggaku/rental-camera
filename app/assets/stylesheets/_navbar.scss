@@ -1,0 +1,94 @@
+#mainNav {
+    border-bottom: 1px solid fade-out($color4, .9);
+    background-color: $bg-white;
+    @include sans-serif-font;
+    @include transition-all;
+
+    .navbar-brand {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color3;
+        @include sans-serif-font;
+
+        &:focus,
+        &:hover {
+            color: darken($color3, .1);
+        }
+    }
+
+    .navbar-nav {
+        >li.nav-item {
+
+            >a.nav-link,
+            >a.nav-link:focus {
+                font-size: .9rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $color4;
+
+                &:hover {
+                    color: $color3;
+                }
+
+                &.active {
+                    color: $color3 !important;
+                    background-color: transparent;
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        border-color: transparent;
+        background-color: transparent;
+
+        .navbar-brand {
+            color: fade-out($bg-white, .3);
+
+            &:focus,
+            &:hover {
+                color: $bg-white;
+            }
+        }
+
+        .navbar-nav>li.nav-item>a.nav-link {
+            padding: 0.5rem 1rem;
+        }
+
+        .navbar-nav>li.nav-item>a.nav-link,
+        .navbar-nav>li.nav-item>a.nav-link:focus {
+            color: fade-out($bg-white, .3);
+
+            &:hover {
+                color: $bg-white;
+            }
+        }
+
+        &.navbar-shrink {
+            border-bottom: 1px solid fade-out($color4, .9);
+            background-color: $bg-white;
+
+            .navbar-brand {
+                color: $color3;
+
+                &:focus,
+                &:hover {
+                    color: darken($color3, .1);
+                }
+            }
+
+            .navbar-nav>li.nav-item>a.nav-link,
+            .navbar-nav>li.nav-item>a.nav-link:focus {
+                color: $color4;
+
+                &:hover {
+                    color: $color3;
+                }
+            }
+        }
+    }
+}
