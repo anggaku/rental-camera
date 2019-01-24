@@ -20,4 +20,5 @@
 //= require jquery.magnific-popup
 //= require loader-page
 //= require camera
+//= require owl.carousel
 //= require_tree .
