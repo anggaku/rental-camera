@@ -1,4 +1,6 @@
 // Styling for the masthead
+@import url('https://fonts.googleapis.com/css?family=Lobster|Major+Mono+Display|Montserrat|Righteous');
+
 header.myheader {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 56px);
@@ -80,6 +82,11 @@ header {
         background-color: black;
         opacity: 0.5;
         z-index: 1;
+    }
+
+    .text-header h5,
+    h3 {
+        font-family: 'Montserrat', sans-serif !important;
     }
 }
 
