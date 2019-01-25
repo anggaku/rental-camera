@@ -11,6 +11,7 @@ class CategoryProductsController < ApplicationController
   # GET /category_products/1.json
   def show
     @category_product = CategoryProduct.friendly.find(params[:id])
+    @products = @category_product.products
   end
 
   # GET /category_products/new

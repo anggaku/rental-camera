@@ -1,3 +1,46 @@
 // Place all the styles related to the Category_Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* Top right text */
+@import url('https://fonts.googleapis.com/css?family=Lobster|Major+Mono+Display|Montserrat|Righteous');
+
+.catprod {
+    h3 {
+        color: $color4;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+
+    .list-group {
+        a {
+            color: $color4;
+            font-size: 14px;
+        }
+
+        .list-group-item {
+            &:hover {
+                background-color: $color2;
+                color: $color4;
+            }
+        }
+    }
+}
+
+.card-product {
+    .card {
+        .card-body {
+            a {
+                color: $text-light;
+            }
+
+            h6 {
+                color: $text-mute;
+            }
+        }
+    }
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}

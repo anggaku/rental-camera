@@ -28,6 +28,18 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Product do
+    list do
+      sort_by :id
+      field :id do
+        sort_reverse false
+      end
+      field :name do
+        sort_reverse false
+      end
+    end
+  end
+
   ## == Gravatar integration ==
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
