@@ -29,6 +29,9 @@ gem 'rails_admin', '~> 1.3'
 
 gem 'friendly_id', '~> 5.2.4'
 
+# for pagination
+gem 'will_paginate-bootstrap4'
+
 # for text area editor
 gem 'tinymce-rails'
 

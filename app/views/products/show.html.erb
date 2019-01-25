@@ -42,7 +42,9 @@
 
 <p>
   <strong>Image1:</strong>
-  <%= @product.image1 %>
+  <div class="img-magnifier-container">
+    <%= image_tag @product.image1, alt: 'product image 1', class: 'img-fluid', id: 'myimage' %>
+  </div>
 </p>
 
 <p>

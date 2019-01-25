@@ -1,0 +1,31 @@
+.navbar-custom {
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);
+    @include sans-serif-font;
+
+    a {
+        color: $color3 !important;
+    }
+
+    .navbar-brand {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .navbar-nav {
+        li.nav-item {
+
+            a.nav-link,
+            a.nav-link:focus {
+                font-size: .9rem;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            a.nav-link {
+                &:hover {
+                    color: $color4 !important;
+                }
+            }
+        }
+    }
+}

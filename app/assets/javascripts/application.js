@@ -22,4 +22,5 @@
 //= require camera
 //= require owl.carousel
 //= require tinymce
+//= require products
 //= require_tree .
