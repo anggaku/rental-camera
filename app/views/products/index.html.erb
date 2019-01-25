@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category product</th>
+      <th>Brand product</th>
+      <th>Availability product</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Kelengkapan</th>
+      <th>Price</th>
+      <th>Review video</th>
+      <th>Image1</th>
+      <th>Image2</th>
+      <th>Image3</th>
+      <th>Image4</th>
+      <th>Image5</th>
+      <th>Image6</th>
+      <th>Image7</th>
+      <th>Image8</th>
+      <th>Image9</th>
+      <th>Image10</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.category_product_id %></td>
+        <td><%= product.brand_product_id %></td>
+        <td><%= product.availability_product %></td>
+        <td><%= product.name %></td>
+        <td><%= product.description %></td>
+        <td><%= product.kelengkapan %></td>
+        <td><%= product.price %></td>
+        <td><%= product.review_video %></td>
+        <td><%= product.image1 %></td>
+        <td><%= product.image2 %></td>
+        <td><%= product.image3 %></td>
+        <td><%= product.image4 %></td>
+        <td><%= product.image5 %></td>
+        <td><%= product.image6 %></td>
+        <td><%= product.image7 %></td>
+        <td><%= product.image8 %></td>
+        <td><%= product.image9 %></td>
+        <td><%= product.image10 %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>

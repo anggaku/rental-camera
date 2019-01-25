@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category_product_id: 1
+  brand_product_id: 1
+  availability_product: 1
+  name: MyString
+  description: MyText
+  kelengkapan: MyText
+  price: 1
+  review_video: MyString
+  image1: MyString
+  image2: MyString
+  image3: MyString
+  image4: MyString
+  image5: MyString
+  image6: MyString
+  image7: MyString
+  image8: MyString
+  image9: MyString
+  image10: MyString
+
+two:
+  category_product_id: 1
+  brand_product_id: 1
+  availability_product: 1
+  name: MyString
+  description: MyText
+  kelengkapan: MyText
+  price: 1
+  review_video: MyString
+  image1: MyString
+  image2: MyString
+  image3: MyString
+  image4: MyString
+  image5: MyString
+  image6: MyString
+  image7: MyString
+  image8: MyString
+  image9: MyString
+  image10: MyString

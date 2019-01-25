@@ -21,4 +21,5 @@
 //= require loader-page
 //= require camera
 //= require owl.carousel
+//= require tinymce
 //= require_tree .

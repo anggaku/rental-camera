@@ -21,6 +21,17 @@ gem 'jquery-rails'
 
 gem 'owlcarousel-rails'
 
+# for authentication
+gem 'devise'
+
+# for admin
+gem 'rails_admin', '~> 1.3'
+
+gem 'friendly_id', '~> 5.2.4'
+
+# for text area editor
+gem 'tinymce-rails'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'

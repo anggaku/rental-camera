@@ -1,0 +1,12 @@
+default:
+  plugins:
+    - image
+    - link
+    - charmap
+
+alternate:
+  selector: textarea.table-editor
+  toolbar: styleselect | bold italic | undo redo | table | charmap
+  plugins:
+    - table
+    - charmap

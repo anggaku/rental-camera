@@ -1,0 +1,109 @@
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :category_product_id %>
+    <%= form.number_field :category_product_id, id: :product_category_product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand_product_id %>
+    <%= form.number_field :brand_product_id, id: :product_brand_product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :availability_product %>
+    <%= form.number_field :availability_product, id: :product_availability_product %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :product_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, rows: 5, cols: 25, :class => "tinymce", id: :product_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kelengkapan %>
+    <%= form.text_area :kelengkapan, rows: 5, cols: 25, :class => "tinymce", id: :product_kelengkapan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price, id: :product_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :review_video %>
+    <%= form.text_field :review_video, id: :product_review_video %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image1 %>
+    <%= form.text_field :image1, id: :product_image1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image2 %>
+    <%= form.text_field :image2, id: :product_image2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image3 %>
+    <%= form.text_field :image3, id: :product_image3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image4 %>
+    <%= form.text_field :image4, id: :product_image4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image5 %>
+    <%= form.text_field :image5, id: :product_image5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image6 %>
+    <%= form.text_field :image6, id: :product_image6 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image7 %>
+    <%= form.text_field :image7, id: :product_image7 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image8 %>
+    <%= form.text_field :image8, id: :product_image8 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image9 %>
+    <%= form.text_field :image9, id: :product_image9 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image10 %>
+    <%= form.text_field :image10, id: :product_image10 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>
+<%= tinymce %>
