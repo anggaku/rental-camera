@@ -1,39 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
+
 #services {
-    background-color: $color2;
+    background-color: $color5;
 
     .section-heading {
-        color: $text-light;
+        color: $bg-white;
+        font-family: 'Source Sans Pro',
+            sans-serif;
+    }
+
+    .my-4 {
+        border-color: $bg-white;
     }
 
     .service-box {
         max-width: 400px;
 
-        .fa-camera-retro {
-            color: $color4;
-        }
-
-        .fa-paper-plane {
-            color: $color4;
-        }
-
-        .fa-code {
-            color: $color4;
-        }
-
-        .fa-heart {
-            color: $color4;
-        }
-
-        .fa-percent {
-            color: $color4;
+        .fa {
+            color: $color6;
         }
 
         .service-title {
-            color: $text-light;
+            color: $bg-white;
+            font-family: 'Source Sans Pro',
+                sans-serif;
         }
 
         .text-muted {
-            color: $text-mute !important;
+            color: $bg-white !important;
+            font-family: 'Source Sans Pro',
+                sans-serif;
         }
     }
 }

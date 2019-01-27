@@ -1,7 +1,19 @@
-#contact {
-    background-color: $color4;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
 
+#contact {
+    background-color: $color6;
+
+    h6,
+    p,
     .footer-a a {
         color: $bg-white;
+        font-family: 'Source Sans Pro',
+            sans-serif;
+    }
+
+    .footer-r a {
+        color: $bg-white !important;
+        font-family: 'Source Sans Pro',
+            sans-serif;
     }
 }

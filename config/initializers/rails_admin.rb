@@ -21,7 +21,10 @@ RailsAdmin.config do |config|
 
   config.model CategoryProduct do
     list do
-      sort_by :name
+      sort_by :id
+      field :id do
+        sort_reverse false
+      end
       field :name do
         sort_reverse false
       end

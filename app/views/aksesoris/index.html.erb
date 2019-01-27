@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Aksesoris</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Slug</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aksesoris.each do |aksesori| %>
+      <tr>
+        <td><%= aksesori.name %></td>
+        <td><%= aksesori.slug %></td>
+        <td><%= link_to 'Show', aksesori %></td>
+        <td><%= link_to 'Edit', edit_aksesori_path(aksesori) %></td>
+        <td><%= link_to 'Destroy', aksesori, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aksesori', new_aksesori_path %>

@@ -6,4 +6,6 @@ class Product < ApplicationRecord
     belongs_to :brand_product
     belongs_to :availability_product
     belongs_to :type_camera
+    belongs_to :merk_lensa
+    belongs_to :aksesori
 end

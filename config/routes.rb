@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :aksesoris
+  resources :merk_lensas
   resources :type_cameras
   get 'site/sistemdansyarat'
 

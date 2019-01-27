@@ -1,5 +1,5 @@
 // Styling for the masthead
-@import url('https://fonts.googleapis.com/css?family=Lobster|Major+Mono+Display|Montserrat|Righteous');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
 
 header.myheader {
     padding-top: 10rem;
@@ -86,11 +86,12 @@ header {
 
     .text-header h5,
     h3 {
-        font-family: 'Montserrat', sans-serif !important;
+        font-family: 'Source Sans Pro',
+            sans-serif;
     }
 }
 
-@media (pointer: coarse) and (hover: none) {
+/* @media (pointer: coarse) and (hover: none) {
     header {
         background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
 
@@ -99,3 +100,4 @@ header {
         }
     }
 }
+*/

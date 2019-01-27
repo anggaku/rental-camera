@@ -1,18 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
+
 #mainNav {
-    border-bottom: 1px solid fade-out($color4, .9);
+    border-bottom: 1px solid fade-out($color6, .9);
     background-color: $bg-white;
     @include sans-serif-font;
     @include transition-all;
+    font-family: 'Source Sans Pro',
+        sans-serif;
+
+    .dropdown-item {
+        &:active {
+            background-color: $bg-white;
+            color: $color7;
+        }
+
+        &:hover {
+            color: $color7;
+        }
+    }
 
     .navbar-brand {
         font-weight: 700;
         text-transform: uppercase;
-        color: $color3;
+        color: $color5;
         @include sans-serif-font;
+        font-family: 'Source Sans Pro',
+            sans-serif;
 
         &:focus,
         &:hover {
-            color: darken($color3, .1);
+            color: darken($color7, .1);
         }
     }
 
@@ -27,11 +44,11 @@
                 color: $color4;
 
                 &:hover {
-                    color: $color3;
+                    color: $color5;
                 }
 
                 &.active {
-                    color: $color3 !important;
+                    color: $color4 !important;
                     background-color: transparent;
 
                     &:hover {
@@ -45,9 +62,13 @@
     @media (min-width: 992px) {
         border-color: transparent;
         background-color: transparent;
+        font-family: 'Source Sans Pro',
+            sans-serif;
 
         .navbar-brand {
             color: fade-out($bg-white, .3);
+            font-family: 'Source Sans Pro',
+                sans-serif;
 
             &:focus,
             &:hover {
@@ -71,13 +92,17 @@
         &.navbar-shrink {
             border-bottom: 1px solid fade-out($color4, .9);
             background-color: $bg-white;
+            font-family: 'Source Sans Pro',
+                sans-serif;
 
             .navbar-brand {
-                color: $color3;
+                color: $color5;
+                font-family: 'Source Sans Pro',
+                    sans-serif;
 
                 &:focus,
                 &:hover {
-                    color: darken($color3, .1);
+                    color: darken($color7, .1);
                 }
             }
 
@@ -86,7 +111,7 @@
                 color: $color4;
 
                 &:hover {
-                    color: $color3;
+                    color: $color5;
                 }
             }
         }

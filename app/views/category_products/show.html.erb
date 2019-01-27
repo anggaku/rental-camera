@@ -8,8 +8,18 @@
 
           <h3 class="my-4"><%= @category_product.name %></h3>
           <div class="list-group">
-            <% TypeCamera.all.each do |type_camera| %>
-                <%= link_to type_camera.name, category_product_path(:type_camera_id => type_camera.id), class: 'list-group-item', method: :get %>
+            <% if @category_product.id == 1 %>
+                <% TypeCamera.all.each do |type_camera| %>
+                    <%= link_to type_camera.name, category_product_path(:type_camera_id => type_camera.id), class: 'list-group-item', method: :get %>
+                <% end %>
+            <% elsif @category_product.id == 2 %>
+                <% MerkLensa.all.each do |merk_lensa| %>
+                    <%= link_to merk_lensa.name, category_product_path(:merk_lensa_id => merk_lensa.id), class: 'list-group-item', method: :get %>
+                <% end %>
+            <% else %>
+                <% Aksesori.all.each do |aksesori| %>
+                    <%= link_to aksesori.name, category_product_path(:aksesori_id => aksesori.id), class: 'list-group-item', method: :get %>
+                <% end %>
             <% end %>
           </div>
 
@@ -25,18 +35,46 @@
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
-              <div class="carousel-item active">
-                <%= image_tag "camera3", alt: 'Camera 3', class: 'd-block img-fluid img-responsive', style: 'width:900px; height:350px;' %>
-                <div class="top-right">Photo by <strong>Paul Gaudriault</strong> on Unsplash</div>
-              </div>
-              <div class="carousel-item">
-                <%= image_tag "camera2", alt: 'Camera 2', class: 'd-block img-fluid img-responsive', style: 'width:900px; height:350px;' %>
-                <div class="top-right">Photo by <strong>ShareGrid</strong> from Unsplash</div>
-              </div>
-              <div class="carousel-item">
-                <%= image_tag "camera4", alt: 'Camera 4', class: 'd-block img-fluid img-responsive', style: 'width:900px; height:350px;' %>
-                <div class="top-right">Photo by <strong>Hanson Lu</strong> on Unsplash</div>
-              </div>
+                <% if @category_product.id == 1 %>
+                    <div class="carousel-item active">
+                        <%= image_tag "camera3", alt: 'Camera 3', class: 'd-block img-fluid img-responsive', style: 'width:900px; height:350px;' %>
+                        <div class="top-right">Photo by <strong>Paul Gaudriault</strong> on Unsplash</div>
+                    </div>
+                    <div class="carousel-item">
+                        <%= image_tag "camera2", alt: 'Camera 2', class: 'd-block img-fluid img-responsive', style: 'width:900px; height:350px;' %>
+                        <div class="top-right">Photo by <strong>ShareGrid</strong> from Unsplash</div>
+                    </div>
+                    <div class="carousel-item">
+                        <%= image_tag "camera4", alt: 'Camera 4', class: 'd-block img-fluid img-responsive', style: 'width:900px; height:350px;' %>
+                        <div class="top-right">Photo by <strong>Hanson Lu</strong> on Unsplash</div>
+                    </div>
+                <% elsif @category_product.id == 2 %>
+                    <div class="carousel-item active">
+                        <%= image_tag "lensa1", alt: 'lensa1', class: 'd-block img-fluid img-responsive', style: 'width:900px; height:350px;' %>
+                        <div class="top-right">Photo by <strong>Simon Rae</strong> on Unsplash</div>
+                    </div>
+                    <div class="carousel-item">
+                        <%= image_tag "lensa2", alt: 'Lensa 2', class: 'd-block img-fluid img-responsive', style: 'width:900px; height:350px;' %>
+                        <div class="top-right">Photo by <strong>Lucas Favre</strong> from Unsplash</div>
+                    </div>
+                    <div class="carousel-item">
+                        <%= image_tag "lensa3", alt: 'Lensa 4', class: 'd-block img-fluid img-responsive', style: 'width:900px; height:350px;' %>
+                        <div class="top-right">Photo by <strong>Alasdair Elmes</strong> on Unsplash</div>
+                    </div>
+                <% else %>
+                    <div class="carousel-item active">
+                        <%= image_tag "aksesori1", alt: 'Aksesoris 1', class: 'd-block img-fluid img-responsive', style: 'width:900px; height:350px;' %>
+                        <div class="top-right">Photo by <strong>Jakob Owens</strong> on Unsplash</div>
+                    </div>
+                    <div class="carousel-item">
+                        <%= image_tag "aksesori2", alt: 'Aksesoris 2', class: 'd-block img-fluid img-responsive', style: 'width:900px; height:350px;' %>
+                        <div class="top-right">Photo by <strong>César Abner Martínez Aguilar</strong> from Unsplash</div>
+                    </div>
+                    <div class="carousel-item">
+                        <%= image_tag "aksesori3", alt: 'Aksesoris 3', class: 'd-block img-fluid img-responsive', style: 'width:900px; height:350px;' %>
+                        <div class="top-right">Photo by <strong>Ian Dooley</strong> on Unsplash</div>
+                    </div>
+            <% end %>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>

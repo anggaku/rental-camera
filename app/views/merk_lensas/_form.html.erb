@@ -1,0 +1,27 @@
+<%= form_with(model: merk_lensa, local: true) do |form| %>
+  <% if merk_lensa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(merk_lensa.errors.count, "error") %> prohibited this merk_lensa from being saved:</h2>
+
+      <ul>
+      <% merk_lensa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :merk_lensa_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :slug %>
+    <%= form.text_field :slug, id: :merk_lensa_slug %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

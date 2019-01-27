@@ -2,25 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* Top right text */
-@import url('https://fonts.googleapis.com/css?family=Lobster|Major+Mono+Display|Montserrat|Righteous');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
 
 .catprod {
     h3 {
-        color: $color4;
-        font-family: 'Montserrat', sans-serif !important;
+        color: $color7;
+        font-family: 'Source Sans Pro', sans-serif;
     }
 
     .list-group {
         a {
-            color: $color4;
+            color: $color6;
             font-size: 14px;
+            font-family: 'Source Sans Pro', sans-serif;
         }
 
         .list-group-item {
             &:hover {
-                background-color: $color2;
-                color: $color4;
+                color: $color7;
                 font-weight: bold;
+                font-family: 'Source Sans Pro', sans-serif;
             }
         }
     }
@@ -31,10 +32,12 @@
         .card-body {
             a {
                 color: $text-light;
+                font-family: 'Source Sans Pro', sans-serif;
             }
 
             h6 {
                 color: $text-mute;
+                font-family: 'Source Sans Pro', sans-serif;
             }
         }
     }

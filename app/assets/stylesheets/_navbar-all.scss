@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
+
 .navbar-custom {
     box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .2);
     @include sans-serif-font;
+    font-family: 'Source Sans Pro',
+        sans-serif;
 
-    a {
-        color: $color3 !important;
+    .dropdown-item {
+        &:active {
+            background-color: $bg-white;
+            color: $color7;
+        }
+
+        &:hover {
+            color: $color7;
+        }
+    }
+
+    .navbar-nav>li.nav-item>a.nav-link {
+        padding: 0.5rem 1rem;
     }
 
     .navbar-brand {
@@ -23,7 +38,7 @@
 
             a.nav-link {
                 &:hover {
-                    color: $color4 !important;
+                    color: $color7 !important;
                 }
             }
         }

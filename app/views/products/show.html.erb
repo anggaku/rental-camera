@@ -4,26 +4,28 @@
 			<div class="container-fliud">
 				<div class="wrapper row">
 					<div class="preview col-md-6">
-						
 						<div class="preview-pic tab-content">
               <div class="tab-pane active" id="pic-1">
                 <div class="img-magnifier-container">
                   <%= image_tag @product.image1, alt: 'product image 1', class: 'img-fluid', id: 'myimage' %>
                 </div>
               </div>
-						  <div class="tab-pane" id="pic-2"><img src="https://i.ibb.co/sJ9QQGd/xiaomi4.jpg" /></div>
-						  <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div>
+						  <div class="tab-pane" id="pic-2">
+                <div class="img-magnifier-container">
+                  <%= image_tag @product.image2, alt: 'product image 2', class: 'img-fluid', id: 'myimage' %>
+                </div>
+              </div>
+						  <div class="tab-pane" id="pic-3">
+                <div class="img-magnifier-container">
+                  <%= image_tag @product.image3, alt: 'product image 3', class: 'img-fluid', id: 'myimage' %>
+                </div>
+              </div>
 						</div>
 						<ul class="preview-thumbnail nav nav-tabs">
-						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><%= image_tag @product.image1, alt: 'product image 1' %></a></li>
-						  <li><a data-target="#pic-2" data-toggle="tab"><img src="https://i.ibb.co/sJ9QQGd/xiaomi4.jpg" /></a></li>
-						  <li><a data-target="#pic-3" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><%= image_tag @product.image1, alt: 'product image 1', class: 'img-fluid' %></a></li>
+						  <li><a data-target="#pic-2" data-toggle="tab"><%= image_tag @product.image2, alt: 'product image 2', class: 'img-fluid' %></a></li>
+						  <li><a data-target="#pic-3" data-toggle="tab"><%= image_tag @product.image3, alt: 'product image 3', class: 'img-fluid' %></a></li>
 						</ul>
-						
 					</div>
 					<div class="details col-md-6">
 						<h3 class="product-title"><%= @product.name %></h3>
@@ -31,7 +33,8 @@
             <br>
             <%= @product.kelengkapan.html_safe %>
             <br>
-						<h4 class="price">Current price: <span>Rp <%= @product.price %></span></h4>
+						<h5 class="price">Current price: <span>Rp <%= @product.price %></span></h5>
+            <h5 class="price">Availability: <span> <%= @product.availability_product.name %></span></h5>
             <p><strong>Have question?</strong></p>
             <ul class="list-unstyled nav">
               <li class="m-r-10">

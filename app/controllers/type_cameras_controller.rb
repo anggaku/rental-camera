@@ -5,7 +5,7 @@ class TypeCamerasController < ApplicationController
   # GET /type_cameras.json
   def index
     @type_cameras = TypeCamera.all
-
+  end
   # GET /type_cameras/1
   # GET /type_cameras/1.json
   def show

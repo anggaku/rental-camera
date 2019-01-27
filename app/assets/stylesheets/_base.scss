@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
 
 hr {
     max-width: 50px;
@@ -76,7 +76,7 @@ html {
     height: 100%;
     width: 100%;
     margin: 0px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif !important;
     background-color: $color1;
 }
 

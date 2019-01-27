@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190127101521) do
+ActiveRecord::Schema.define(version: 20190127191738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "aksesoris", force: :cascade do |t|
+    t.string "name"
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_aksesoris_on_slug", unique: true
+  end
 
   create_table "availability_products", force: :cascade do |t|
     t.string "name"
@@ -51,6 +59,14 @@ ActiveRecord::Schema.define(version: 20190127101521) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
+  create_table "merk_lensas", force: :cascade do |t|
+    t.string "name"
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_merk_lensas_on_slug", unique: true
+  end
+
   create_table "products", force: :cascade do |t|
     t.integer "category_product_id"
     t.integer "brand_product_id"
@@ -74,6 +90,8 @@ ActiveRecord::Schema.define(version: 20190127101521) do
     t.datetime "updated_at", null: false
     t.string "slug"
     t.integer "type_camera_id"
+    t.integer "merk_lensa_id"
+    t.integer "aksesori_id"
     t.index ["slug"], name: "index_products_on_slug", unique: true
   end
 
