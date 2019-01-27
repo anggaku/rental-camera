@@ -1,4 +1,4 @@
-<%= render 'navbar-all' %>
+<%= render 'site/navbar-all' %>
 <!-- Page Content -->
     <div class="container">
 
@@ -16,7 +16,7 @@
         </div>
         <!-- /.col-lg-3 -->
 
-        <div class="col-lg-9" style="text-align: center;">
+        <div class="col-lg-9">
 
           <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -103,18 +103,18 @@
 
     // Activate scrollspy to add active class to navbar items on scroll
     $('body').scrollspy({
-        target: '#mainNav-all',
+        target: '#mainNavall',
         offset: 57
     });
 
     // Collapse Navbar
     var navbarCollapse = function () {
-        var mainNav = $('#mainNav');
-        if (mainNav.length) {
-            if ($("#mainNav").offset().top > 100) {
-                $("#mainNav").addClass("navbar-shrink");
+        var mainNavall = $('#mainNavall');
+        if (mainNavall.length) {
+            if ($("#mainNavall").offset().top > 100) {
+                $("#mainNavall").addClass("navbar-shrink");
             } else {
-                $("#mainNav").removeClass("navbar-shrink");
+                $("#mainNavall").removeClass("navbar-shrink");
             }
         }
     };

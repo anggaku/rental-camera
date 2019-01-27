@@ -1,4 +1,158 @@
-<p id="notice"><%= notice %></p>
+<%= render 'site/navbar-all' %>
+<div class="container card-detail-prod m-t-100 m-b-100">
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
+						
+						<div class="preview-pic tab-content">
+              <div class="tab-pane active" id="pic-1">
+                <div class="img-magnifier-container">
+                  <%= image_tag @product.image1, alt: 'product image 1', class: 'img-fluid', id: 'myimage' %>
+                </div>
+              </div>
+						  <div class="tab-pane" id="pic-2"><img src="https://i.ibb.co/sJ9QQGd/xiaomi4.jpg" /></div>
+						  <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
+						  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
+						  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div>
+						</div>
+						<ul class="preview-thumbnail nav nav-tabs">
+						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><%= image_tag @product.image1, alt: 'product image 1' %></a></li>
+						  <li><a data-target="#pic-2" data-toggle="tab"><img src="https://i.ibb.co/sJ9QQGd/xiaomi4.jpg" /></a></li>
+						  <li><a data-target="#pic-3" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+						  <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+						  <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+						</ul>
+						
+					</div>
+					<div class="details col-md-6">
+						<h3 class="product-title"><%= @product.name %></h3>
+						<%= @product.description.html_safe %>
+            <br>
+            <%= @product.kelengkapan.html_safe %>
+            <br>
+						<h4 class="price">Current price: <span>Rp <%= @product.price %></span></h4>
+            <p><strong>Have question?</strong></p>
+            <ul class="list-unstyled nav">
+              <li class="m-r-10">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/pakehero/">
+              <span><%= image_tag 'instagram', alt: 'instagram', class: 'img-fluid' %></span>
+              </a>
+              </li>
+              <li class="m-r-10">
+                <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=6281222225939">
+                  <span><%= image_tag 'whatsapp', alt: 'whatsapp', class: 'img-fluid' %></span>
+                </a>
+              </li>
+            </ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  <%= render 'site/contact'%>
+
+  <script>
+(function ($) {
+    "use strict"; // Start of use strict
+
+    // Smooth scrolling using jQuery easing
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: (target.offset().top - 56)
+                }, 1000, "easeInOutExpo");
+                return false;
+            }
+        }
+    });
+
+    // Closes responsive menu when a scroll trigger link is clicked
+    $('.js-scroll-trigger').click(function () {
+        $('.navbar-collapse').collapse('hide');
+    });
+
+    // Activate scrollspy to add active class to navbar items on scroll
+    $('body').scrollspy({
+        target: '#mainNavall',
+        offset: 57
+    });
+
+    // Collapse Navbar
+    var navbarCollapse = function () {
+        var mainNavall = $('#mainNavall');
+        if (mainNavall.length) {
+            if ($("#mainNavall").offset().top > 100) {
+                $("#mainNavall").addClass("navbar-shrink");
+            } else {
+                $("#mainNavall").removeClass("navbar-shrink");
+            }
+        }
+    };
+    // Collapse now if page is not at top
+    navbarCollapse();
+    // Collapse the navbar when page is scrolled
+    $(window).scroll(navbarCollapse);
+
+    // Scroll reveal calls
+    window.sr = ScrollReveal();
+
+    sr.reveal('.sr-icon-1', {
+        delay: 200,
+        scale: 0
+    });
+    sr.reveal('.sr-icon-2', {
+        delay: 400,
+        scale: 0
+    });
+    sr.reveal('.sr-icon-3', {
+        delay: 600,
+        scale: 0
+    });
+    sr.reveal('.sr-icon-4', {
+        delay: 800,
+        scale: 0
+    });
+    sr.reveal('.sr-button', {
+        delay: 200,
+        distance: '15px',
+        origin: 'bottom',
+        scale: 0.8
+    });
+    sr.reveal('.sr-contact-1', {
+        delay: 200,
+        scale: 0
+    });
+    sr.reveal('.sr-contact-2', {
+        delay: 400,
+        scale: 0
+    });
+
+    // Magnific popup calls
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1]
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+        }
+    });
+
+})(jQuery); // End of use strict
+
+</script>
+
+<!-- <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Category product:</strong>
@@ -12,7 +166,7 @@
 
 <p>
   <strong>Availability product:</strong>
-  <%= @product.availability_product %>
+  <%= @product.availability_product_id %>
 </p>
 
 <p>
@@ -94,3 +248,4 @@
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+--> 

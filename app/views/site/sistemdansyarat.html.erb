@@ -1,18 +1,20 @@
-<div id="loader-wrapper">
-    <div id="loader"></div>
 
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
+<%= render 'navbar-all'%>
+<section id="sistemdansyarat">
+        <div class="container">
+            <!-- Columns are always 50% wide, on mobile and desktop -->
+            <div class="row">
+                <div class="col-md-6">
+                   <img src="https://i.ibb.co/XVWFkNb/syaratorder.jpg" class="img-fluid" />
+                </div>
+                <div class="col-md-6">
+                    <img src="https://i.ibb.co/j5P57LZ/sistemorder.jpg" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </section>
+<%= render 'contact'%>
 
-</div>
-
-<%= render 'navbar' %>
-<%= render 'header' %>
-<%= render 'about' %>
-<%= render 'services' %>
-<%= render 'portfolio' %>
-<%= render 'testimoni' %>
-<%= render 'contact' %>
 <script>
 (function ($) {
     "use strict"; // Start of use strict
@@ -38,18 +40,18 @@
 
     // Activate scrollspy to add active class to navbar items on scroll
     $('body').scrollspy({
-        target: '#mainNav',
+        target: '#mainNavall',
         offset: 57
     });
 
     // Collapse Navbar
     var navbarCollapse = function () {
-        var mainNav = $('#mainNav');
-        if (mainNav.length) {
-            if ($("#mainNav").offset().top > 100) {
-                $("#mainNav").addClass("navbar-shrink");
+        var mainNavall = $('#mainNavall');
+        if (mainNavall.length) {
+            if ($("#mainNavall").offset().top > 100) {
+                $("#mainNavall").addClass("navbar-shrink");
             } else {
-                $("#mainNav").removeClass("navbar-shrink");
+                $("#mainNavall").removeClass("navbar-shrink");
             }
         }
     };
@@ -110,33 +112,4 @@
 
 })(jQuery); // End of use strict
 
-</script>
-
-<script>
-$(document).ready(function(){
-  $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    autoplay:true,
-    items: 2,
-    nav: true,
-    autoplayTimeout:3000,
-    autoplayHoverPause:true,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:true
-        },
-        600:{
-            items:2,
-            nav:false
-        },
-        1000:{
-            items:3,
-            nav:true
-        }
-    }
-})
-});
 </script>

@@ -11,7 +11,7 @@ class CategoryProductsController < ApplicationController
   # GET /category_products/1.json
   def show
     @category_product = CategoryProduct.friendly.find(params[:id])
-    @products = @category_product.products.paginate(:page => params[:page], :per_page => 9)
+    @products = @category_product.products.order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
   end
 
   # GET /category_products/new
