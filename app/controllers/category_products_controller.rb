@@ -10,8 +10,11 @@ class CategoryProductsController < ApplicationController
   # GET /category_products/1
   # GET /category_products/1.json
   def show
-    @category_product = CategoryProduct.friendly.find(params[:id])
-    @products = @category_product.products.order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
+    if params[:type_camera_id]
+      @products = @category_product.products.where(type_camera_id: params[:type_camera_id]).order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
+    else
+      @products = @category_product.products.order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
+    end
   end
 
   # GET /category_products/new

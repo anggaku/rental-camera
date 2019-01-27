@@ -8,9 +8,9 @@
 
           <h3 class="my-4"><%= @category_product.name %></h3>
           <div class="list-group">
-            <a href="#" class="list-group-item">DSLR</a>
-            <a href="#" class="list-group-item">Mirrorless</a>
-            <a href="#" class="list-group-item">Action Cam</a>
+            <% TypeCamera.all.each do |type_camera| %>
+                <%= link_to type_camera.name, category_product_path(:type_camera_id => type_camera.id), class: 'list-group-item', method: :get %>
+            <% end %>
           </div>
 
         </div>

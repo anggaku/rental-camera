@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :type_cameras
   get 'site/sistemdansyarat'
 
   devise_for :users
