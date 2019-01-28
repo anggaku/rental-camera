@@ -10,7 +10,7 @@ class BrandProductsController < ApplicationController
   # GET /brand_products/1
   # GET /brand_products/1.json
   def show
-    @brand_product = BrandProduct.friendly.find(params[:id])
+    @products = @brand_product.products.order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
   end
 
   # GET /brand_products/new

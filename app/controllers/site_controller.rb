@@ -3,6 +3,5 @@ class SiteController < ApplicationController
   end
 
   def sistemdansyarat
-    
   end
 end
