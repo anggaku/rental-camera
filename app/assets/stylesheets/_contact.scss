@@ -1,18 +1,59 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
 
 #contact {
-    background-color: $color6;
+    display: flex;
+    background-color: rgb(10, 14, 51);
+    flex-direction: column;
+
+    .copyright {
+        padding: 20px !important;
+        border-top: 1px solid rgba(151, 151, 151, 0.5);
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    .link-footer {
+        max-width: 1080px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        padding: 68px 24px 48px;
+        margin: auto;
+
+        ul {
+            color: #787878;
+            font-size: 14px;
+        }
+
+        h6 {
+            font-size: 18px;
+            color: #ffffff;
+        }
+    }
 
     h6,
     p,
     .footer-a a {
-        color: $bg-white;
         font-family: 'Source Sans Pro',
             sans-serif;
+        color: #787878;
+
+        &:hover {
+            color: #ffffff;
+        }
     }
 
     .footer-r a {
-        color: $bg-white !important;
+        color: #787878 !important;
         font-family: 'Source Sans Pro',
             sans-serif;
     }

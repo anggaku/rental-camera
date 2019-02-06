@@ -1,33 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
 
 #services {
-    background-color: $color5;
+    background-color: $bg-white;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     .section-heading {
-        color: $bg-white;
+        color: #333333;
         font-family: 'Source Sans Pro',
             sans-serif;
-    }
-
-    .my-4 {
-        border-color: $bg-white;
+        font-size: 32px;
     }
 
     .service-box {
         max-width: 400px;
 
-        .fa {
-            color: $color6;
+        .fas {
+            color: #5A6BF3 !important;
         }
 
         .service-title {
-            color: $bg-white;
+            color: #625D7E;
             font-family: 'Source Sans Pro',
                 sans-serif;
         }
 
         .text-muted {
-            color: $bg-white !important;
+            color: #787878;
             font-family: 'Source Sans Pro',
                 sans-serif;
         }

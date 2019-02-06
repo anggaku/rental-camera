@@ -11,25 +11,24 @@
     .dropdown-item {
         &:active {
             background-color: $bg-white;
-            color: $color7;
+            color: $color5;
         }
 
         &:hover {
-            color: $color7;
+            color: $color5;
         }
     }
 
     .navbar-brand {
         font-weight: 700;
-        text-transform: uppercase;
-        color: $color5;
+        color: #333333;
         @include sans-serif-font;
         font-family: 'Source Sans Pro',
             sans-serif;
 
         &:focus,
         &:hover {
-            color: darken($color7, .1);
+            color: darken($color5, .1);
         }
     }
 
@@ -39,16 +38,14 @@
             >a.nav-link,
             >a.nav-link:focus {
                 font-size: .9rem;
-                font-weight: 700;
-                text-transform: uppercase;
-                color: $color4;
+                color: #333333;
 
                 &:hover {
                     color: $color5;
                 }
 
                 &.active {
-                    color: $color4 !important;
+                    color: $color5 !important;
                     background-color: transparent;
 
                     &:hover {
@@ -90,25 +87,25 @@
         }
 
         &.navbar-shrink {
-            border-bottom: 1px solid fade-out($color4, .9);
+            border-bottom: 1px solid fade-out(#62ACB5, .9);
             background-color: $bg-white;
             font-family: 'Source Sans Pro',
                 sans-serif;
 
             .navbar-brand {
-                color: $color5;
+                color: #333333;
                 font-family: 'Source Sans Pro',
                     sans-serif;
 
                 &:focus,
                 &:hover {
-                    color: darken($color7, .1);
+                    color: darken($color5, .1);
                 }
             }
 
             .navbar-nav>li.nav-item>a.nav-link,
             .navbar-nav>li.nav-item>a.nav-link:focus {
-                color: $color4;
+                color: #333333;
 
                 &:hover {
                     color: $color5;

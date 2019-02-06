@@ -1,57 +1,165 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
 
 #testimoni {
+    background-color: #EAF2FB;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     .section-heading {
-        color: $color5;
+        color: #333333 !important;
+        font-size: 32px;
         font-family: 'Source Sans Pro',
             sans-serif;
     }
 
-    .my-4 {
-        border-color: $color5;
+    .owl-nav {
+        font-size: 28px;
+        color: #5A6BF3 !important;
+
+        .owl-prev {
+            padding-right: 5px !important;
+        }
     }
 
-    blockquote {
-        font-size: 18px;
-        background: #f9f9f9;
-        border-left: 10px solid $color5;
-        margin: .5em 10px;
-        padding: 0 10px;
-        quotes: "\201C""\201D""\2018""\2019";
-        padding: 10px 20px;
-        line-height: 1.4;
-        font-family: 'Source Sans Pro',
-            sans-serif;
-
-        p {
-            margin: 0;
-            font-family: 'Source Sans Pro',
-                sans-serif;
-            color: $color6;
-        }
-
-        footer {
-            margin: 0;
-            text-align: right;
-            font-size: 1em;
-            font-family: 'Source Sans Pro',
-                sans-serif;
-            font-style: italic;
-        }
-
+    #team .card {
+        border: none;
+        background: #ffffff;
     }
 
-    blockquote:before {
-        content: open-quote;
-        display: inline;
-        line-height: 0;
-        left: -10px;
+    .image-flip:hover .backside,
+    .image-flip.hover .backside {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        border-radius: .25rem;
+    }
+
+    .image-flip:hover .frontside,
+    .image-flip.hover .frontside {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+
+    .mainflip {
+        -webkit-transition: 1s;
+        -webkit-transform-style: preserve-3d;
+        -ms-transition: 1s;
+        -moz-transition: 1s;
+        -moz-transform: perspective(1000px);
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transition: 1s;
+        transform-style: preserve-3d;
         position: relative;
-        top: 30px;
-        font-family: 'Source Sans Pro',
-            sans-serif;
-        color: $color6;
-        font-size: 3em;
+    }
+
+    .frontside {
+        position: relative;
+        -webkit-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        z-index: 2;
+        margin-bottom: 30px;
+    }
+
+    .backside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: white;
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+        -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+        -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+        box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    }
+
+    .frontside,
+    .backside {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: 1s;
+        -webkit-transform-style: preserve-3d;
+        -moz-transition: 1s;
+        -moz-transform-style: preserve-3d;
+        -o-transition: 1s;
+        -o-transform-style: preserve-3d;
+        -ms-transition: 1s;
+        -ms-transform-style: preserve-3d;
+        transition: 1s;
+        transform-style: preserve-3d;
+        color: #787878;
+    }
+
+    .frontside .card,
+    .backside .card {
+        min-height: 312px;
+    }
+
+    .backside .card a {
+        font-size: 18px;
+        color: #625D7E !important;
+    }
+
+    .frontside .card .card-title,
+    .backside .card .card-title {
+        color: #5B6CF3 !important;
+    }
+
+    .frontside .card .card-body img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
     }
 }
+
+// blockquote {
+//     font-size: 18px;
+//     background: #f9f9f9;
+//     border-left: 10px solid $color5;
+//     margin: .5em 10px;
+//     padding: 0 10px;
+//     quotes: "\201C""\201D""\2018""\2019";
+//     padding: 10px 20px;
+//     line-height: 1.4;
+//     font-family: 'Source Sans Pro',
+//         sans-serif;
+
+//     p {
+//         margin: 0;
+//         font-family: 'Source Sans Pro',
+//             sans-serif;
+//         color: $color6;
+//     }
+
+//     footer {
+//         margin: 0;
+//         text-align: right;
+//         font-size: 1em;
+//         font-family: 'Source Sans Pro',
+//             sans-serif;
+//         font-style: italic;
+//     }
+
+// }
+
+// blockquote:before {
+//     content: open-quote;
+//     display: inline;
+//     line-height: 0;
+//     left: -10px;
+//     position: relative;
+//     top: 30px;
+//     font-family: 'Source Sans Pro',
+//         sans-serif;
+//     color: $color6;
+//     font-size: 3em;
+// }
