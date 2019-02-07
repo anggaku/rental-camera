@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190127191738) do
+ActiveRecord::Schema.define(version: 20190207032355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,26 @@ ActiveRecord::Schema.define(version: 20190127191738) do
     t.datetime "updated_at", null: false
     t.string "slug"
     t.index ["slug"], name: "index_category_products_on_slug", unique: true
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.string "id_client"
+    t.string "client_name"
+    t.text "alamat_rumah"
+    t.text "alamat_kantor"
+    t.string "no_hp"
+    t.string "id_line"
+    t.string "id_ig"
+    t.string "id_fb"
+    t.string "email"
+    t.string "kampus"
+    t.string "upload_ktp"
+    t.string "upload_kk"
+    t.string "upload_identitas"
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_clients_on_slug", unique: true
   end
 
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|

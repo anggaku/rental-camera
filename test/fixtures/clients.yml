@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_client: MyString
+  client_name: MyString
+  alamat_rumah: MyText
+  alamat_kantor: MyText
+  no_hp: MyString
+  id_line: MyString
+  id_ig: MyString
+  id_fb: MyString
+  email: MyString
+  kampus: MyString
+  upload_ktp: MyString
+  upload_kk: MyString
+  upload_identitas: MyString
+  slug: MyString
+
+two:
+  id_client: MyString
+  client_name: MyString
+  alamat_rumah: MyText
+  alamat_kantor: MyText
+  no_hp: MyString
+  id_line: MyString
+  id_ig: MyString
+  id_fb: MyString
+  email: MyString
+  kampus: MyString
+  upload_ktp: MyString
+  upload_kk: MyString
+  upload_identitas: MyString
+  slug: MyString

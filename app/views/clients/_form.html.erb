@@ -1,0 +1,160 @@
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="https://i.ibb.co/pwmWpmr/camera-1.png" alt=""/>
+            <h3>Halo,</h3>
+            <p>Sebelum melakukan penyewaan kamu harus mendaftar terlebih dahulu ya.</p>
+        </div>
+        <div class="col-md-9 register-right">
+            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Customer</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="register-heading">Isikan data diri kamu</h3>
+                    <div class="row register-form">
+                        <div class="col-md-6">
+                        <%= form_with(model: client, local: true) do |form| %>
+                        <% if client.errors.any? %>
+                          <div id="error_explanation">
+                            <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+                            <ul>
+                            <% client.errors.full_messages.each do |message| %>
+                              <li><%= message %></li>
+                            <% end %>
+                            </ul>
+                          </div>
+                        <% end %>
+                            <div class="form-group">
+                              <%= form.label :id_client %>
+                              <%= form.text_field :id_client, id: :client_id_client, :class => "form-control", :disabled => true, :type => "text" %>
+                            </div>
+                            <div class="form-group">
+                              <%= form.label :client_name %>
+                              <%= form.text_field :client_name, id: :client_client_name, :class => "form-control", :placeholder => "client name", :type => "text" %>
+                            </div>
+                            <div class="form-group">
+                              <%= form.label :id_client %>
+                              <%= form.text_field :id_client, id: :client_id_client, :class => "form-control", :placeholder => "client name", :type => "text" %>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
+                                    <option>What is your Birthdate?</option>
+                                    <option>What is Your old Phone Number</option>
+                                    <option>What is your Pet Name?</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Enter Your Answer *" value="" />
+                            </div>
+                            <input type="submit" class="btnRegister"  value="Submit"/>
+                        </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--
+<%= form_with(model: client, local: true) do |form| %>
+  <% if client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_client %>
+    <%= form.text_field :id_client, id: :client_id_client %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_name %>
+    <%= form.text_field :client_name, id: :client_client_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alamat_rumah %>
+    <%= form.text_area :alamat_rumah, id: :client_alamat_rumah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alamat_kantor %>
+    <%= form.text_area :alamat_kantor, id: :client_alamat_kantor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_hp %>
+    <%= form.text_field :no_hp, id: :client_no_hp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_line %>
+    <%= form.text_field :id_line, id: :client_id_line %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_ig %>
+    <%= form.text_field :id_ig, id: :client_id_ig %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_fb %>
+    <%= form.text_field :id_fb, id: :client_id_fb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :client_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kampus %>
+    <%= form.text_field :kampus, id: :client_kampus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :upload_ktp %>
+    <%= form.text_field :upload_ktp, id: :client_upload_ktp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :upload_kk %>
+    <%= form.text_field :upload_kk, id: :client_upload_kk %>
+  </div>
+
+  <div class="field">
+    <%= form.label :upload_identitas %>
+    <%= form.text_field :upload_identitas, id: :client_upload_identitas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :slug %>
+    <%= form.text_field :slug, id: :client_slug %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div> 
+<% end %> -->

@@ -35,6 +35,9 @@ gem 'will_paginate-bootstrap4'
 # for text area editor
 gem 'tinymce-rails'
 
+# add breadcrumbs
+gem "breadcrumbs_on_rails"
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
