@@ -10,11 +10,12 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
+    @client = Client.friendly.find(params[:id])
   end
 
   # GET /clients/new
   def new
-    @client = Client.new
+    @client = Client.new(id_client: Client.generate_id_client)
   end
 
   # GET /clients/1/edit
@@ -64,7 +65,7 @@ class ClientsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_client
-      @client = Client.find(params[:id])
+      @client = Client.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
