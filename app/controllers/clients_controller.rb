@@ -6,22 +6,18 @@ class ClientsController < ApplicationController
   def index
     @clients = Client.all
   end
-
   # GET /clients/1
   # GET /clients/1.json
   def show
     @client = Client.friendly.find(params[:id])
   end
-
   # GET /clients/new
   def new
     @client = Client.new(id_client: Client.generate_id_client)
   end
-
   # GET /clients/1/edit
   def edit
   end
-
   # POST /clients
   # POST /clients.json
   def create
