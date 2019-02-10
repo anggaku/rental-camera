@@ -55,7 +55,7 @@ group :development do
 end
 
 group :production do
-
+# weh ini isinya lu kemanain?
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
