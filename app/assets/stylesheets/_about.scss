@@ -22,9 +22,6 @@
             sans-serif;
         font-size: 16px;
         line-height: 24px;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
         letter-spacing: normal;
         color: rgb(120, 120, 120);
     }
@@ -41,7 +38,6 @@
             color: white;
             font-weight: 700;
             /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
-            box-shadow: 0 0 20px #eee;
             border-radius: 50px;
         }
 
@@ -50,12 +46,12 @@
         /* <- Magic Stuff Start */
 
         .btn:hover {
-            background-position: right center;
+            background-image: linear-gradient(to right, #fb474d, #74bfdd);
             /* change the direction of the change here */
         }
 
         .btn-grab-it {
-            background-image: linear-gradient(to right, #686BE3 0%, #5A6BF3 51%, #8390F6 100%);
+            background-color: #fb474d;
         }
     }
 }

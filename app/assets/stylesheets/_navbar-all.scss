@@ -1,45 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
 
 .navbar-custom {
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
-    @include sans-serif-font;
-    font-family: 'Source Sans Pro',
-        sans-serif;
-
-    .dropdown-item {
-        &:active {
-            background-color: $bg-white;
-            color: $color5;
-        }
-
-        &:hover {
-            color: $color5;
-        }
-    }
-
-    .navbar-brand {
-        font-weight: 700;
-    }
-
     .navbar-nav>li.nav-item>a.nav-link {
         padding: 0.5rem 1rem;
+
+        &:hover {
+            color: #fb474d;
+        }
+
+        &.active {
+            color: #fb474d;
+            font-weight: 700;
+        }
     }
 
-    .navbar-nav {
-        li.nav-item {
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
 
-            a.nav-link,
-            a.nav-link:focus {
-                font-size: .9rem;
-            }
+    .dropdown-menu a {
+        float: none;
+        color: #2f4154;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
 
-            a.nav-link {
-                &:hover {
-                    color: $color5 !important;
-                }
-            }
-        }
+    .dropdown-menu a:hover {
+        background-color: #ececec;
+        color: #fb474d;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
     }
 }

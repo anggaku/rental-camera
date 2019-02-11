@@ -6,7 +6,7 @@
 
 .catprod {
     h3 {
-        color: $color7;
+        color: #fb474d;
         font-family: 'Source Sans Pro', sans-serif;
     }
 
@@ -19,7 +19,7 @@
 
         .list-group-item {
             &:hover {
-                color: $color7;
+                color: #fb474d;
                 font-weight: bold;
                 font-family: 'Source Sans Pro', sans-serif;
             }
@@ -29,6 +29,10 @@
 
 .card-product {
     .card {
+        &:hover {
+            box-shadow: 0 0.5rem 1rem #fb474dca !important;
+        }
+
         .card-body {
             a {
                 color: $text-light;
@@ -38,6 +42,34 @@
             h6 {
                 color: $text-mute;
                 font-family: 'Source Sans Pro', sans-serif;
+            }
+
+            .btn {
+                flex: 1 1 auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                transition: 0.5s;
+                background-size: 100% auto;
+                color: white;
+                font-weight: 700;
+                /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+            }
+
+            /* Demo Stuff End -> */
+
+            /* <- Magic Stuff Start */
+
+            .btn:hover {
+                background-color: #fb474d;
+                border-color: #fb474d;
+                color: #ffffff;
+                /* change the direction of the change here */
+            }
+
+            .btn-grab-it {
+                background-color: #ffffff;
+                border-color: #fb474d;
+                color: #fb474d;
             }
         }
     }

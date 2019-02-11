@@ -49,7 +49,7 @@
               </li>
             </ul>
             <div>
-              <%= link_to 'Sewa kamera', new_client_path, class: "btn btn-grab-it float-right"%>
+              <%= link_to 'Sewa kamera', new_client_path(product_id: @product.id), class: "btn btn-grab-it float-right"%>
             </div>
 					</div>
 				</div>
@@ -199,7 +199,7 @@
   <strong>Review video:</strong>
   <%= @product.review_video %>
 </p>
-
+<%= link_to 'Sewa kamera', new_client_path(product_id: @product.id), class: "btn btn-grab-it float-right"%>
 <p>
   <strong>Image1:</strong>
   <div class="img-magnifier-container">
@@ -209,7 +209,7 @@
 
 <p>
   <strong>Image2:</strong>
-  <%= @product.image2 %>
+  <%= @product.image2 %><%= link_to 'Sewa kamera', new_client_path(product_id: @product.id), class: "btn btn-grab-it float-right"%>
 </p>
 
 <p>
@@ -238,7 +238,7 @@
 </p>
 
 <p>
-  <strong>Image8:</strong>
+  <strong>Image8:</strong><%= link_to 'Sewa kamera', new_client_path(product_id: @product.id), class: "btn btn-grab-it float-right"%>
   <%= @product.image8 %>
 </p>
 
