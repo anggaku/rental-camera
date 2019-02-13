@@ -13,7 +13,7 @@ class ClientsController < ApplicationController
   end
   # GET /clients/new
   def new
-    @product = Product.find(params[:product_id])
+    @product = Product.friendly.find(params[:product_id])
     @client = Client.new(id_client: Client.generate_id_client)
   end
   # GET /clients/1/edit
@@ -67,6 +67,6 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:id_client, :client_name, :alamat_rumah, :alamat_kantor, :no_hp, :id_line, :id_ig, :id_fb, :email, :kampus, :upload_ktp, :upload_kk, :upload_identitas, :slug)
+      params.require(:client).permit(:id_client, :client_name, :alamat_rumah, :alamat_kantor, :no_hp, :id_line, :id_ig, :id_fb, :email, :kampus, :upload_ktp, :upload_kk, :upload_identitas, :slug, :product_id)
     end
 end

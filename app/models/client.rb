@@ -15,4 +15,6 @@ class Client < ApplicationRecord
     mount_uploader :upload_ktp, ImageUploader
     mount_uploader :upload_kk, ImageUploader
     mount_uploader :upload_identitas, ImageUploader
+
+    belongs_to :product
 end

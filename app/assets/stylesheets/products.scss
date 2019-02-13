@@ -29,12 +29,14 @@
         /* <- Magic Stuff Start */
 
         .btn:hover {
-            background-position: right center;
+            border-color: #fb474d;
+            background-color: #fff;
+            color: #fb474d;
             /* change the direction of the change here */
         }
 
         .btn-grab-it {
-            background-image: linear-gradient(to right, #686BE3 0%, #5A6BF3 51%, #8390F6 100%);
+            background-color: #fb474d;
         }
     }
 }
@@ -165,7 +167,7 @@ img {
     font-family: 'Source Sans Pro',
         sans-serif;
     font-weight: bold;
-    color: #5B6CF3 !important;
+    color: #fb474d !important;
 }
 
 .price {
@@ -176,7 +178,7 @@ img {
 
 .checked,
 .price span {
-    color: $color5;
+    color: #fb474d;
 }
 
 .product-title,

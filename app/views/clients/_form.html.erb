@@ -1,111 +1,101 @@
 <%= render 'site/navbar-all' %>
-<div class="container register">
-    <div class="row">
-        <div class="col-md-3 register-left">
-            <img src="https://i.ibb.co/pwmWpmr/camera-1.png" alt=""/>
-            <h3>Halo,</h3>
-            <p>Sebelum melakukan penyewaan kamu harus mengisi form penyewaan terlebih dahulu ya.</p>
-            
-            <h4>Barang yang kamu ingin kamu pesan adalah <%= @product.name %></h4>
-        </div>
-        <div class="col-md-9 register-right">
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <h3 class="register-heading">Isikan data diri kamu</h3>
-                    <%= form_with(model: client, local: true) do |form| %>
-                        <% if client.errors.any? %>
-                          <div id="error_explanation">
-                            <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
 
-                            <ul>
-                            <% client.errors.full_messages.each do |message| %>
-                              <li><%= message %></li>
-                            <% end %>
-                            </ul>
-                          </div>
-                        <% end %>
-                    <div class="row register-form">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                              <%= form.label :id_client %>
-                              <%= form.text_field :id_client, id: :client_id_client, :class => "form-control", :type => "text", :readonly => true %>
-                            </div>
-                            <div class="form-group">
-                              <%= form.label :client_name %>
-                              <%= form.text_field :client_name, id: :client_client_name, :class => "form-control", :placeholder => "client name", :type => "text" %>
-                            </div> 
-                            <div class="form-group">
-                              <label for="call_name">Nama panggilan</label>
-                              <%= form.text_field :slug, id: :client_slug, :class => "form-control", :placeholder => "nama panggilan", :type => "text" %>
-                            </div>
-                            <div class="form-group">
-                              <%= form.label :alamat_rumah %>
-                              <%= form.text_area :alamat_rumah, id: :client_alamat_rumah, :class => "form-control", :placeholder => "alamat rumah", :type => "text" %>
-                            </div>
-                            <div class="form-group">
-                              <%= form.label :alamat_kantor %>
-                              <%= form.text_area :alamat_kantor, id: :client_alamat_kantor, :class => "form-control", :placeholder => "alamat kantor", :type => "text" %>
-                            </div>
-                            <div class="form-group">
-                              <%= form.label :no_hp %>
-                              <%= form.text_field :no_hp, id: :client_no_hp, :class => "form-control", :placeholder => "nomor handphone kamu", :minlength => "10", :maxlength => "12", :type => "text" %>
-                            </div>
-                            <div class="form-group">
-                              <%= form.label :kampus %>
-                              <%= form.text_field :kampus, id: :client_kampus, :class => "form-control", :placeholder => "kampus kamu jika masih kuliah", :type => "text" %>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                              <%= form.label :email %>
-                              <%= form.text_field :email, id: :client_email, :class => "form-control", :placeholder => "email kamu", :type => "email" %>
-                            </div>
-                            <div class="form-group">
-                              <%= form.label :id_line %>
-                              <%= form.text_field :id_line, id: :client_id_line, :class => "form-control", :placeholder => "id line kamu", :type => "text" %>
-                            </div>
-                            <div class="form-group">
-                              <%= form.label :id_ig %>
-                              <%= form.text_field :id_ig, id: :client_id_ig, :class => "form-control", :placeholder => "id ig kamu", :type => "text" %>
-                            </div>
-                            <!--
-                            <div class="form-group">
-                                <select class="form-control">
-                                    <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
-                                    <option>What is your Birthdate?</option>
-                                    <option>What is Your old Phone Number</option>
-                                    <option>What is your Pet Name?</option>
-                                </select>
-                            </div> -->
-                            <div class="form-group">
-                              <%= form.label :id_fb %>
-                              <%= form.text_field :id_fb, id: :client_id_fb, :class => "form-control", :placeholder => "id fb kamu", :type => "text" %>
-                            </div>
-                            <div class="form-group">
-                              <%= form.label :upload_ktp %>
-                              <%= form.file_field :upload_ktp, id: :client_upload_ktp, :class => "form-control" %>
-                            </div>
-                            <div class="form-group">
-                              <%= form.label :upload_kk %>
-                              <%= form.file_field :upload_kk, id: :client_upload_kk, :class => "form-control" %>
-                            </div>
-                            <div class="form-group">
-                              <%= form.label :upload_identitas %>
-                              <%= form.file_field :upload_identitas, id: :client_upload_identitas, :class => "form-control" %>
-                            </div>
-                            <div class="actions">
-                              <%= form.submit 'Submit', :class => "btnRegister" %>
-                            </div> 
-                        </div>
-                        <% end %>
-                    </div>
+<div class="container">
+    <div class="row m-t-150 m-b-50">
+      <div class="col-md-12">
+        <div class="card border-primary mb-3">
+          <div class="card-header">Form penyewaan</div>
+          <div class="card-body">
+            <h5 class="card-title m-b-20">Sebelum melakukan penyewaan, kamu harus mengisi terlebih dahulu form di bawah ini ya.</h5>
+            <%= form_with(model: client, local: true) do |form| %>
+              <% if client.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+                  <ul>
+                  <% client.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
                 </div>
-            </div>
+              <% end %>
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                    <%= form.label :id_client %>
+                    <%= form.text_field :id_client, id: :client_id_client, :class => "form-control", :type => "text", :readonly => true %>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Product name</label>
+                    <br>
+                    <%= form.collection_select :product_id, Product.order(:name),:id,:name, {include_blank: false}, {class: 'form-control '} %>
+                  </div>
+                  <div class="form-group">
+                    <%= form.label :client_name %>
+                    <%= form.text_field :client_name, id: :client_client_name, :class => "form-control", :placeholder => "client name", :type => "text" %>
+                  </div> 
+                  <div class="form-group">
+                    <label for="call_name">Nama panggilan</label>
+                    <%= form.text_field :slug, id: :client_slug, :class => "form-control", :placeholder => "nama panggilan", :type => "text" %>
+                  </div>
+                  <div class="form-group">
+                    <%= form.label :alamat_rumah %>
+                    <%= form.text_area :alamat_rumah, id: :client_alamat_rumah, :class => "form-control", :placeholder => "alamat rumah", :type => "text" %>
+                  </div>
+                  <div class="form-group">
+                    <%= form.label :alamat_kantor %>
+                    <%= form.text_area :alamat_kantor, id: :client_alamat_kantor, :class => "form-control", :placeholder => "alamat kantor", :type => "text" %>
+                  </div>
+                  <div class="form-group">
+                    <%= form.label :no_hp %>
+                    <%= form.text_field :no_hp, id: :client_no_hp, :class => "form-control", :placeholder => "nomor handphone kamu", :minlength => "10", :maxlength => "12", :type => "text" %>
+                  </div>
+                  <div class="form-group">
+                    <%= form.label :kampus %>
+                    <%= form.text_field :kampus, id: :client_kampus, :class => "form-control", :placeholder => "kampus kamu jika masih kuliah", :type => "text" %>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                    <%= form.label :email %>
+                    <%= form.text_field :email, id: :client_email, :class => "form-control", :placeholder => "email kamu", :type => "email" %>
+                  </div>
+                  <div class="form-group">
+                    <%= form.label :id_line %>
+                    <%= form.text_field :id_line, id: :client_id_line, :class => "form-control", :placeholder => "id line kamu", :type => "text" %>
+                  </div>
+                  <div class="form-group">
+                    <%= form.label :id_ig %>
+                    <%= form.text_field :id_ig, id: :client_id_ig, :class => "form-control", :placeholder => "id ig kamu", :type => "text" %>
+                  </div>
+                  <div class="form-group">
+                    <%= form.label :id_fb %>
+                    <%= form.text_field :id_fb, id: :client_id_fb, :class => "form-control", :placeholder => "id fb kamu", :type => "text" %>
+                  </div>
+                  <div class="form-group">
+                    <%= form.label :upload_ktp %>
+                    <%= form.file_field :upload_ktp, id: :client_upload_ktp, :class => "form-control" %>
+                  </div>
+                  <div class="form-group">
+                    <%= form.label :upload_kk %>
+                    <%= form.file_field :upload_kk, id: :client_upload_kk, :class => "form-control" %>
+                  </div>
+                  <div class="form-group">
+                    <%= form.label :upload_identitas %>
+                    <%= form.file_field :upload_identitas, id: :client_upload_identitas, :class => "form-control" %>
+                  </div>
+                  <div class="actions">
+                    <%= form.submit 'Submit', :class => "btn btn-lg btn-block btn-submit float-right " %>
+                  </div> 
+              </div>
+              <% end %>
+          </div>
         </div>
+      </div>
     </div>
-
 </div>
 
+  <%= render 'site/contact'%>
 <!--
 <%= form_with(model: client, local: true) do |form| %>
   <% if client.errors.any? %>

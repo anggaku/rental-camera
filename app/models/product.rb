@@ -8,4 +8,5 @@ class Product < ApplicationRecord
     belongs_to :type_camera
     belongs_to :merk_lensa
     belongs_to :aksesori
+    belongs_to :client
 end

@@ -1,102 +1,151 @@
+<%= render 'site/navbar-all' %>
+
 <div class="container emp-profile">
-            <form method="post">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
-                            <div class="file btn btn-lg btn-primary">
-                                Change Photo
-                                <input type="file" name="file"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="profile-head">
-                                    <h5>
-                                        <%= @client.client_name %>
-                                    </h5>
-                                    <h6>
-                                        <%= @client.id_client %>
-                                    </h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="profile-work">
-                            <p>Alamat Rumah</p>
-                            <%= @client.alamat_rumah %>
-                            <p>Alamat Kantor</p>
-                            <%= @client.alamat_kantor %>
-                            <p>Kampus</p>
-                            <%= @client.kampus %>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="tab-content profile-tab" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Username</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><%= @client.slug %></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Name</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><%= @client.client_name %></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Email</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><%= @client.email %></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Phone</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><%= @client.no_hp %></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Id Line</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><%= @client.id_line %></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Id Instagram</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><%= @client.id_ig %></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Id Facebook</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p><%= @client.id_fb %></p>
-                                            </div>
-                                        </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>           
+    <p id="notice"><%= notice %>
+    <div class="card border-primary mb-3"">
+    <div class="card-header">Data client penyewa kamera</div>
+    <div class="card-body">
+        <div class="row">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <h4 class="alert-heading">Terimakasih, data kamu sudah tersimpan</h4>
+                <p>Untuk proses dan tahap selanjutnya, pihak pakehero akan menghubungi kamu melalui email atau nomor handphone yang sudah kamu berikan.</p>
+                <hr>
+                <p class="mb-0">Mohon ditunggu ya, sebisa mungkin kami akan menghubungi kamu dengan cepat.</p>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+                    <%= image_tag @client.product.image1, alt: 'product image 1', class: 'card-img img-fluid' %>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="profile-head">
+                    <h5>
+                        <%= @client.client_name %>
+                    </h5>
+                    <h6>
+                        <%= @client.id_client %>
+                    </h6>
+                    <h6>
+                        <%= @client.product.name %>
+                    </h6>
+                    <div class="m-b-10">
+                        <p class="m-b-0">Alamat Rumah</p>
+                        <%= @client.alamat_rumah %>
+                    </div>
+                    <div class="m-b-10">
+                        <p class="m-b-0">Alamat Rumah</p>
+                        <%= @client.alamat_kantor %>
+                    </div>
+                    <div class="m-b-10">
+                        <p class="m-b-0">Alamat Rumah</p>
+                        <%= @client.kampus %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-t-50">
+            <div class="col-md-12">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Nama panggilan</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= @client.slug %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Name</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= @client.client_name %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Email</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= @client.email %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Phone</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= @client.no_hp %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Id Line</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= @client.id_line %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Id Instagram</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= @client.id_ig %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Id Facebook</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= @client.id_fb %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h5 class="m-t-20">Identitas Penyewa</h5>
+        <div class="row no-gutters popup-gallery">
+            <div class="col-lg-4 col-sm-6 hover08">
+            <%= link_to image_tag(@client.upload_ktp, class: 'img-fluid img-portfolio', style: 'height: 300px; width: 460px;'), image_path(@client.upload_ktp) , class: 'portfolio-box' %>
+            </div>
+            <div class="col-lg-4 col-sm-6 hover08">
+            <%= link_to image_tag(@client.upload_kk, class: 'img-fluid img-portfolio', style: 'height: 300px; width: 460px;'), image_path(@client.upload_kk) , class: 'portfolio-box' %>
+            </div>
+            <div class="col-lg-4 col-sm-6 hover08">
+            <%= link_to image_tag(@client.upload_identitas, class: 'img-fluid img-portfolio', style: 'height: 300px; width: 460px;'), image_path(@client.upload_identitas) , class: 'portfolio-box' %>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<%= render 'site/contact'%>
+
+<script>
+$('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1]
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+        }
+    });
+</script>
 
 
 <!-- <p id="notice"><%= notice %></p>
@@ -104,6 +153,11 @@
 <p>
   <strong>Id client:</strong>
   <%= @client.id_client %>
+</p>
+
+<p>
+  <strong>Id product:</strong>
+  <%= @client.product.name %>
 </p>
 
 <p>
@@ -173,4 +227,4 @@
 
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>
---> 
+-->
