@@ -4,14 +4,11 @@
         <div class="col-md-3 register-left">
             <img src="https://i.ibb.co/pwmWpmr/camera-1.png" alt=""/>
             <h3>Halo,</h3>
-            <p>Sebelum melakukan penyewaan kamu harus mendaftar terlebih dahulu ya.</p>
+            <p>Sebelum melakukan penyewaan kamu harus mengisi form penyewaan terlebih dahulu ya.</p>
+            
+            <h4>Barang yang kamu ingin kamu pesan adalah <%= @product.name %></h4>
         </div>
         <div class="col-md-9 register-right">
-            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><%= @product.name %></a>
-                </li>
-            </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <h3 class="register-heading">Isikan data diri kamu</h3>

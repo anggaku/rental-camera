@@ -104,10 +104,9 @@
 
 .register .nav-tabs .nav-link.active {
     width: 100px;
-    color: #0062cc;
-    border: 2px solid #0062cc;
-    border-top-left-radius: 1.5rem;
-    border-bottom-left-radius: 1.5rem;
+    color: #fb474d;
+    border: 1px solid #fb474d;
+    border-radius: 50px;
 }
 
 .register-heading {
@@ -200,10 +199,7 @@
     border: none;
 }
 
-.profile-head .nav-tabs .nav-link.active {
-    border: none;
-    border-bottom: 2px solid #0062cc;
-}
+
 
 .profile-work {
     padding: 14%;
