@@ -2,5 +2,5 @@ class TypeCamera < ApplicationRecord
     extend FriendlyId
     friendly_id :name, use: :slugged
 
-    has_many :products
+    has_many :cameras
 end

@@ -11,13 +11,13 @@ class CategoryProductsController < ApplicationController
   # GET /category_products/1.json
   def show
     if params[:type_camera_id]
-      @products = @category_product.products.where(type_camera_id: params[:type_camera_id]).order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
+      @cameras = @category_product.cameras.where(type_camera_id: params[:type_camera_id]).order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
     elsif params[:merk_lensa_id]
-      @products = @category_product.products.where(merk_lensa_id: params[:merk_lensa_id]).order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
+      @lensas = @category_product.lensas.where(merk_lensa_id: params[:merk_lensa_id]).order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
     elsif params[:aksesori_id]
-      @products = @category_product.products.where(aksesori_id: params[:aksesori_id]).order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
+      @accessories = @category_product.accessories.where(aksesori_id: params[:aksesori_id]).order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
     else
-      @products = @category_product.products.order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
+      @cameras = @category_product.cameras.order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
     end
   end
 

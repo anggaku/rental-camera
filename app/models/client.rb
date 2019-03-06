@@ -16,6 +16,6 @@ class Client < ApplicationRecord
     mount_uploader :upload_kk, ImageUploader
     mount_uploader :upload_identitas, ImageUploader
 
-    has_many :products
+    belongs_to :products
     has_many :invoices
 end

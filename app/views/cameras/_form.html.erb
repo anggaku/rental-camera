@@ -1,0 +1,92 @@
+<%= form_with(model: camera, local: true) do |form| %>
+  <% if camera.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(camera.errors.count, "error") %> prohibited this camera from being saved:</h2>
+
+      <ul>
+      <% camera.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :category_product_id %>
+    <%= form.number_field :category_product_id, id: :camera_category_product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type_camera_id %>
+    <%= form.number_field :type_camera_id, id: :camera_type_camera_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :merk_camera_id %>
+    <%= form.number_field :merk_camera_id, id: :camera_merk_camera_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :availability_product_id %>
+    <%= form.number_field :availability_product_id, id: :camera_availability_product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :camera_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :camera_description %>
+    <%= form.text_area :camera_description, id: :camera_camera_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :camera_kelengkapan %>
+    <%= form.text_area :camera_kelengkapan, id: :camera_camera_kelengkapan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :camera_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :review_video %>
+    <%= form.text_field :review_video, id: :camera_review_video %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image1 %>
+    <%= form.text_field :image1, id: :camera_image1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image2 %>
+    <%= form.text_field :image2, id: :camera_image2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image3 %>
+    <%= form.text_field :image3, id: :camera_image3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image4 %>
+    <%= form.text_field :image4, id: :camera_image4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image5 %>
+    <%= form.text_field :image5, id: :camera_image5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :slug %>
+    <%= form.text_field :slug, id: :camera_slug %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

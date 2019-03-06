@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cameras</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category product</th>
+      <th>Type camera</th>
+      <th>Merk camera</th>
+      <th>Availability product</th>
+      <th>Name</th>
+      <th>Camera description</th>
+      <th>Camera kelengkapan</th>
+      <th>Price</th>
+      <th>Review video</th>
+      <th>Image1</th>
+      <th>Image2</th>
+      <th>Image3</th>
+      <th>Image4</th>
+      <th>Image5</th>
+      <th>Slug</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cameras.each do |camera| %>
+      <tr>
+        <td><%= camera.category_product_id %></td>
+        <td><%= camera.type_camera_id %></td>
+        <td><%= camera.merk_camera_id %></td>
+        <td><%= camera.availability_product_id %></td>
+        <td><%= camera.name %></td>
+        <td><%= camera.camera_description %></td>
+        <td><%= camera.camera_kelengkapan %></td>
+        <td><%= camera.price %></td>
+        <td><%= camera.review_video %></td>
+        <td><%= camera.image1 %></td>
+        <td><%= camera.image2 %></td>
+        <td><%= camera.image3 %></td>
+        <td><%= camera.image4 %></td>
+        <td><%= camera.image5 %></td>
+        <td><%= camera.slug %></td>
+        <td><%= link_to 'Show', camera %></td>
+        <td><%= link_to 'Edit', edit_camera_path(camera) %></td>
+        <td><%= link_to 'Destroy', camera, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Camera', new_camera_path %>

@@ -13,7 +13,7 @@ class ClientsController < ApplicationController
   end
   # GET /clients/new
   def new
-    @product = Product.friendly.find(params[:product_id])
+    # @product = Product.friendly.find(params[:product_id])
     @client = Client.new(id_client: Client.generate_id_client)
   end
   # GET /clients/1/edit

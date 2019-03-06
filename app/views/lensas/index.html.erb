@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lensas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category product</th>
+      <th>Merk lensa</th>
+      <th>Availability product</th>
+      <th>Name</th>
+      <th>Slug</th>
+      <th>Lensa description</th>
+      <th>Lensa kelengkapan</th>
+      <th>Price</th>
+      <th>Review video</th>
+      <th>Image1</th>
+      <th>Image2</th>
+      <th>Image3</th>
+      <th>Image4</th>
+      <th>Image5</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lensas.each do |lensa| %>
+      <tr>
+        <td><%= lensa.category_product_id %></td>
+        <td><%= lensa.merk_lensa_id %></td>
+        <td><%= lensa.availability_product_id %></td>
+        <td><%= lensa.name %></td>
+        <td><%= lensa.slug %></td>
+        <td><%= lensa.lensa_description %></td>
+        <td><%= lensa.lensa_kelengkapan %></td>
+        <td><%= lensa.price %></td>
+        <td><%= lensa.review_video %></td>
+        <td><%= lensa.image1 %></td>
+        <td><%= lensa.image2 %></td>
+        <td><%= lensa.image3 %></td>
+        <td><%= lensa.image4 %></td>
+        <td><%= lensa.image5 %></td>
+        <td><%= link_to 'Show', lensa %></td>
+        <td><%= link_to 'Edit', edit_lensa_path(lensa) %></td>
+        <td><%= link_to 'Destroy', lensa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lensa', new_lensa_path %>

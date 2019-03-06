@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category_product_id: 1
+  merk_lensa_id: 1
+  availability_product_id: 1
+  name: MyString
+  slug: MyString
+  lensa_description: MyText
+  lensa_kelengkapan: MyText
+  price: 9.99
+  review_video: MyString
+  image1: MyString
+  image2: MyString
+  image3: MyString
+  image4: MyString
+  image5: MyString
+
+two:
+  category_product_id: 1
+  merk_lensa_id: 1
+  availability_product_id: 1
+  name: MyString
+  slug: MyString
+  lensa_description: MyText
+  lensa_kelengkapan: MyText
+  price: 9.99
+  review_video: MyString
+  image1: MyString
+  image2: MyString
+  image3: MyString
+  image4: MyString
+  image5: MyString

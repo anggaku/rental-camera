@@ -10,10 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190306025020) do
+ActiveRecord::Schema.define(version: 20190306221754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accessories", force: :cascade do |t|
+    t.integer "category_product_id"
+    t.integer "availability_product_id"
+    t.integer "aksesori_id"
+    t.string "name"
+    t.string "slug"
+    t.text "accessorie_description"
+    t.text "accessorie_kelengkapan"
+    t.decimal "price"
+    t.string "review_video"
+    t.string "image1"
+    t.string "image2"
+    t.string "image3"
+    t.string "image4"
+    t.string "image5"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_accessories_on_slug", unique: true
+  end
 
   create_table "aksesoris", force: :cascade do |t|
     t.string "name"
@@ -47,6 +67,27 @@ ActiveRecord::Schema.define(version: 20190306025020) do
     t.datetime "updated_at", null: false
     t.string "slug"
     t.index ["slug"], name: "index_brand_products_on_slug", unique: true
+  end
+
+  create_table "cameras", force: :cascade do |t|
+    t.integer "category_product_id"
+    t.integer "type_camera_id"
+    t.integer "merk_camera_id"
+    t.integer "availability_product_id"
+    t.string "name"
+    t.text "camera_description"
+    t.text "camera_kelengkapan"
+    t.decimal "price"
+    t.string "review_video"
+    t.string "image1"
+    t.string "image2"
+    t.string "image3"
+    t.string "image4"
+    t.string "image5"
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_cameras_on_slug", unique: true
   end
 
   create_table "category_products", force: :cascade do |t|
@@ -105,6 +146,34 @@ ActiveRecord::Schema.define(version: 20190306025020) do
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "lensas", force: :cascade do |t|
+    t.integer "category_product_id"
+    t.integer "merk_lensa_id"
+    t.integer "availability_product_id"
+    t.string "name"
+    t.string "slug"
+    t.text "lensa_description"
+    t.text "lensa_kelengkapan"
+    t.decimal "price"
+    t.string "review_video"
+    t.string "image1"
+    t.string "image2"
+    t.string "image3"
+    t.string "image4"
+    t.string "image5"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_lensas_on_slug", unique: true
+  end
+
+  create_table "merk_cameras", force: :cascade do |t|
+    t.string "name"
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_merk_cameras_on_slug", unique: true
   end
 
   create_table "merk_lensas", force: :cascade do |t|

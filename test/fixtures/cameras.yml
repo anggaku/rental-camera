@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category_product_id: 1
+  type_camera_id: 1
+  merk_camera_id: 1
+  availability_product_id: 1
+  name: MyString
+  camera_description: MyText
+  camera_kelengkapan: MyText
+  price: 9.99
+  review_video: MyString
+  image1: MyString
+  image2: MyString
+  image3: MyString
+  image4: MyString
+  image5: MyString
+  slug: MyString
+
+two:
+  category_product_id: 1
+  type_camera_id: 1
+  merk_camera_id: 1
+  availability_product_id: 1
+  name: MyString
+  camera_description: MyText
+  camera_kelengkapan: MyText
+  price: 9.99
+  review_video: MyString
+  image1: MyString
+  image2: MyString
+  image3: MyString
+  image4: MyString
+  image5: MyString
+  slug: MyString

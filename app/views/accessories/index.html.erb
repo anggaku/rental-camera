@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Accessories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category product</th>
+      <th>Availability product</th>
+      <th>Aksesori</th>
+      <th>Name</th>
+      <th>Slug</th>
+      <th>Accessorie description</th>
+      <th>Accessorie kelengkapan</th>
+      <th>Price</th>
+      <th>Review video</th>
+      <th>Image1</th>
+      <th>Image2</th>
+      <th>Image3</th>
+      <th>Image4</th>
+      <th>Image5</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accessories.each do |accessory| %>
+      <tr>
+        <td><%= accessory.category_product_id %></td>
+        <td><%= accessory.availability_product_id %></td>
+        <td><%= accessory.aksesori_id %></td>
+        <td><%= accessory.name %></td>
+        <td><%= accessory.slug %></td>
+        <td><%= accessory.accessorie_description %></td>
+        <td><%= accessory.accessorie_kelengkapan %></td>
+        <td><%= accessory.price %></td>
+        <td><%= accessory.review_video %></td>
+        <td><%= accessory.image1 %></td>
+        <td><%= accessory.image2 %></td>
+        <td><%= accessory.image3 %></td>
+        <td><%= accessory.image4 %></td>
+        <td><%= accessory.image5 %></td>
+        <td><%= link_to 'Show', accessory %></td>
+        <td><%= link_to 'Edit', edit_accessory_path(accessory) %></td>
+        <td><%= link_to 'Destroy', accessory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Accessory', new_accessory_path %>

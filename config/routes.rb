@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :accessories
+  resources :lensas
+  resources :cameras
+  resources :merk_cameras
   resources :payments
   resources :invoices
   resources :banks

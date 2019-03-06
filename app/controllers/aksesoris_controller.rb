@@ -10,7 +10,7 @@ class AksesorisController < ApplicationController
   # GET /aksesoris/1
   # GET /aksesoris/1.json
   def show
-    @products = @aksesori.products.order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
+    @accessories = @aksesori.accessories.order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
   end
 
   # GET /aksesoris/new

@@ -1,0 +1,87 @@
+<%= form_with(model: lensa, local: true) do |form| %>
+  <% if lensa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lensa.errors.count, "error") %> prohibited this lensa from being saved:</h2>
+
+      <ul>
+      <% lensa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :category_product_id %>
+    <%= form.number_field :category_product_id, id: :lensa_category_product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :merk_lensa_id %>
+    <%= form.number_field :merk_lensa_id, id: :lensa_merk_lensa_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :availability_product_id %>
+    <%= form.number_field :availability_product_id, id: :lensa_availability_product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :lensa_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :slug %>
+    <%= form.text_field :slug, id: :lensa_slug %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lensa_description %>
+    <%= form.text_area :lensa_description, id: :lensa_lensa_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lensa_kelengkapan %>
+    <%= form.text_area :lensa_kelengkapan, id: :lensa_lensa_kelengkapan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :lensa_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :review_video %>
+    <%= form.text_field :review_video, id: :lensa_review_video %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image1 %>
+    <%= form.text_field :image1, id: :lensa_image1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image2 %>
+    <%= form.text_field :image2, id: :lensa_image2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image3 %>
+    <%= form.text_field :image3, id: :lensa_image3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image4 %>
+    <%= form.text_field :image4, id: :lensa_image4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image5 %>
+    <%= form.text_field :image5, id: :lensa_image5 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -10,7 +10,9 @@ class AvailabilityProductsController < ApplicationController
   # GET /availability_products/1
   # GET /availability_products/1.json
   def show
-    @products = @availability_product.products.order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
+    @accessories = @availability_product.accessories.order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
+    @cameras = @availability_product.cameras.order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
+    @lensas = @availability_product.lensas.order("created_at ASC").paginate(:page => params[:page], :per_page => 9)
   end
 
   # GET /availability_products/new

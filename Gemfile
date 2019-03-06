@@ -19,6 +19,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'jquery-rails'
 
+# multiselect rails
+gem 'bootstrap-multiselect_rails', '~> 0.9.4'
+
 gem 'owlcarousel-rails'
 
 # for authentication
