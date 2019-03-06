@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Kode bank:</strong>
+  <%= @bank.kode_bank %>
+</p>
+
+<p>
+  <strong>Nama bank:</strong>
+  <%= @bank.nama_bank %>
+</p>
+
+<p>
+  <strong>No rekening:</strong>
+  <%= @bank.no_rekening %>
+</p>
+
+<p>
+  <strong>Nama rekening:</strong>
+  <%= @bank.nama_rekening %>
+</p>
+
+<p>
+  <strong>Alamat:</strong>
+  <%= @bank.alamat %>
+</p>
+
+<%= link_to 'Edit', edit_bank_path(@bank) %> |
+<%= link_to 'Back', banks_path %>

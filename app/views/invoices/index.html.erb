@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Invoices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>No invoice</th>
+      <th>Client</th>
+      <th>Tgl invoice</th>
+      <th>Tgl awal</th>
+      <th>Tgl akhir</th>
+      <th>Product</th>
+      <th>Lokasi</th>
+      <th>Harga</th>
+      <th>Diskon</th>
+      <th>Total biaya</th>
+      <th>Tahun</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invoices.each do |invoice| %>
+      <tr>
+        <td><%= invoice.no_invoice %></td>
+        <td><%= invoice.client_id %></td>
+        <td><%= invoice.tgl_invoice %></td>
+        <td><%= invoice.tgl_awal %></td>
+        <td><%= invoice.tgl_akhir %></td>
+        <td><%= invoice.product_id %></td>
+        <td><%= invoice.lokasi %></td>
+        <td><%= invoice.harga %></td>
+        <td><%= invoice.diskon %></td>
+        <td><%= invoice.total_biaya %></td>
+        <td><%= invoice.tahun %></td>
+        <td><%= invoice.status %></td>
+        <td><%= link_to 'Show', invoice %></td>
+        <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
+        <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Invoice', new_invoice_path %>

@@ -1,0 +1,42 @@
+<%= form_with(model: bank, local: true) do |form| %>
+  <% if bank.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bank.errors.count, "error") %> prohibited this bank from being saved:</h2>
+
+      <ul>
+      <% bank.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :kode_bank %>
+    <%= form.text_field :kode_bank, id: :bank_kode_bank %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nama_bank %>
+    <%= form.text_field :nama_bank, id: :bank_nama_bank %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_rekening %>
+    <%= form.text_field :no_rekening, id: :bank_no_rekening %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nama_rekening %>
+    <%= form.text_field :nama_rekening, id: :bank_nama_rekening %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alamat %>
+    <%= form.text_area :alamat, id: :bank_alamat %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

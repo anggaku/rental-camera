@@ -1,0 +1,52 @@
+<%= form_with(model: payment, local: true) do |form| %>
+  <% if payment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+
+      <ul>
+      <% payment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :invoice_id %>
+    <%= form.number_field :invoice_id, id: :payment_invoice_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_id %>
+    <%= form.number_field :client_id, id: :payment_client_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tgl_payment %>
+    <%= form.date_select :tgl_payment, id: :payment_tgl_payment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jumlah_diterima %>
+    <%= form.text_field :jumlah_diterima, id: :payment_jumlah_diterima %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_keseluruhan %>
+    <%= form.text_field :total_keseluruhan, id: :payment_total_keseluruhan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bank_id %>
+    <%= form.number_field :bank_id, id: :payment_bank_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status_sewa %>
+    <%= form.text_field :status_sewa, id: :payment_status_sewa %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

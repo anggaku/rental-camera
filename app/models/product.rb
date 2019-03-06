@@ -9,4 +9,6 @@ class Product < ApplicationRecord
     belongs_to :merk_lensa
     belongs_to :aksesori
     belongs_to :client
+
+    has_many :invoices
 end

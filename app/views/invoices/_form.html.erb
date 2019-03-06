@@ -1,0 +1,77 @@
+<%= form_with(model: invoice, local: true) do |form| %>
+  <% if invoice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
+
+      <ul>
+      <% invoice.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :no_invoice %>
+    <%= form.text_field :no_invoice, id: :invoice_no_invoice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client_id %>
+    <%= form.number_field :client_id, id: :invoice_client_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tgl_invoice %>
+    <%= form.date_select :tgl_invoice, id: :invoice_tgl_invoice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tgl_awal %>
+    <%= form.date_select :tgl_awal, id: :invoice_tgl_awal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tgl_akhir %>
+    <%= form.date_select :tgl_akhir, id: :invoice_tgl_akhir %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.number_field :product_id, id: :invoice_product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lokasi %>
+    <%= form.text_area :lokasi, id: :invoice_lokasi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :harga %>
+    <%= form.text_field :harga, id: :invoice_harga %>
+  </div>
+
+  <div class="field">
+    <%= form.label :diskon %>
+    <%= form.text_field :diskon, id: :invoice_diskon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_biaya %>
+    <%= form.text_field :total_biaya, id: :invoice_total_biaya %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tahun %>
+    <%= form.text_field :tahun, id: :invoice_tahun %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :invoice_status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

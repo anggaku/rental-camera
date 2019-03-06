@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Invoice:</strong>
+  <%= @payment.invoice_id %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @payment.client_id %>
+</p>
+
+<p>
+  <strong>Tgl payment:</strong>
+  <%= @payment.tgl_payment %>
+</p>
+
+<p>
+  <strong>Jumlah diterima:</strong>
+  <%= @payment.jumlah_diterima %>
+</p>
+
+<p>
+  <strong>Total keseluruhan:</strong>
+  <%= @payment.total_keseluruhan %>
+</p>
+
+<p>
+  <strong>Bank:</strong>
+  <%= @payment.bank_id %>
+</p>
+
+<p>
+  <strong>Status sewa:</strong>
+  <%= @payment.status_sewa %>
+</p>
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>

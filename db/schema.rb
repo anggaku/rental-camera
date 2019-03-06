@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190213100118) do
+ActiveRecord::Schema.define(version: 20190306025020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,16 @@ ActiveRecord::Schema.define(version: 20190213100118) do
     t.datetime "updated_at", null: false
     t.string "slug"
     t.index ["slug"], name: "index_availability_products_on_slug", unique: true
+  end
+
+  create_table "banks", force: :cascade do |t|
+    t.string "kode_bank"
+    t.string "nama_bank"
+    t.string "no_rekening"
+    t.string "nama_rekening"
+    t.text "alamat"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "brand_products", force: :cascade do |t|
@@ -80,12 +90,41 @@ ActiveRecord::Schema.define(version: 20190213100118) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
+  create_table "invoices", force: :cascade do |t|
+    t.string "no_invoice"
+    t.integer "client_id"
+    t.date "tgl_invoice"
+    t.date "tgl_awal"
+    t.date "tgl_akhir"
+    t.integer "product_id"
+    t.text "lokasi"
+    t.decimal "harga"
+    t.decimal "diskon"
+    t.decimal "total_biaya"
+    t.string "tahun"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "merk_lensas", force: :cascade do |t|
     t.string "name"
     t.string "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["slug"], name: "index_merk_lensas_on_slug", unique: true
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.integer "invoice_id"
+    t.integer "client_id"
+    t.date "tgl_payment"
+    t.decimal "jumlah_diterima"
+    t.decimal "total_keseluruhan"
+    t.integer "bank_id"
+    t.string "status_sewa"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|

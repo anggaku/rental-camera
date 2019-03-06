@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>No invoice:</strong>
+  <%= @invoice.no_invoice %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @invoice.client_id %>
+</p>
+
+<p>
+  <strong>Tgl invoice:</strong>
+  <%= @invoice.tgl_invoice %>
+</p>
+
+<p>
+  <strong>Tgl awal:</strong>
+  <%= @invoice.tgl_awal %>
+</p>
+
+<p>
+  <strong>Tgl akhir:</strong>
+  <%= @invoice.tgl_akhir %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @invoice.product_id %>
+</p>
+
+<p>
+  <strong>Lokasi:</strong>
+  <%= @invoice.lokasi %>
+</p>
+
+<p>
+  <strong>Harga:</strong>
+  <%= @invoice.harga %>
+</p>
+
+<p>
+  <strong>Diskon:</strong>
+  <%= @invoice.diskon %>
+</p>
+
+<p>
+  <strong>Total biaya:</strong>
+  <%= @invoice.total_biaya %>
+</p>
+
+<p>
+  <strong>Tahun:</strong>
+  <%= @invoice.tahun %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @invoice.status %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>

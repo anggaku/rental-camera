@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  invoice_id: 1
+  client_id: 1
+  tgl_payment: 2019-03-06
+  jumlah_diterima: 9.99
+  total_keseluruhan: 9.99
+  bank_id: 1
+  status_sewa: MyString
+
+two:
+  invoice_id: 1
+  client_id: 1
+  tgl_payment: 2019-03-06
+  jumlah_diterima: 9.99
+  total_keseluruhan: 9.99
+  bank_id: 1
+  status_sewa: MyString

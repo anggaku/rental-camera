@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  no_invoice: MyString
+  client_id: 1
+  tgl_invoice: 2019-03-06
+  tgl_awal: 2019-03-06
+  tgl_akhir: 2019-03-06
+  product_id: 1
+  lokasi: MyText
+  harga: 9.99
+  diskon: 9.99
+  total_biaya: 9.99
+  tahun: MyString
+  status: MyString
+
+two:
+  no_invoice: MyString
+  client_id: 1
+  tgl_invoice: 2019-03-06
+  tgl_awal: 2019-03-06
+  tgl_akhir: 2019-03-06
+  product_id: 1
+  lokasi: MyText
+  harga: 9.99
+  diskon: 9.99
+  total_biaya: 9.99
+  tahun: MyString
+  status: MyString

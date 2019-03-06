@@ -17,4 +17,5 @@ class Client < ApplicationRecord
     mount_uploader :upload_identitas, ImageUploader
 
     belongs_to :product
+    has_many :invoices
 end
