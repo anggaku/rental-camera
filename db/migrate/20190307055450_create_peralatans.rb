@@ -1,13 +1,13 @@
-class CreateAccessories < ActiveRecord::Migration[5.1]
+class CreatePeralatans < ActiveRecord::Migration[5.1]
   def change
-    create_table :accessories do |t|
+    create_table :peralatans do |t|
       t.integer :category_product_id
       t.integer :availability_product_id
       t.integer :aksesori_id
       t.string :name
       t.string :slug
-      t.text :accessorie_description
-      t.text :accessorie_kelengkapan
+      t.text :peralatan_description
+      t.text :peralatan_kelengkapan
       t.decimal :price
       t.string :review_video
       t.string :image1
@@ -18,6 +18,6 @@ class CreateAccessories < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-    add_index :accessories, :slug, unique: true
+    add_index :peralatans, :slug, unique: true
   end
 end

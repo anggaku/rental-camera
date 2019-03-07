@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Peralatans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category product</th>
+      <th>Availability product</th>
+      <th>Aksesori</th>
+      <th>Name</th>
+      <th>Slug</th>
+      <th>Peralatan description</th>
+      <th>Peralatan kelengkapan</th>
+      <th>Price</th>
+      <th>Review video</th>
+      <th>Image1</th>
+      <th>Image2</th>
+      <th>Image3</th>
+      <th>Image4</th>
+      <th>Image5</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @peralatans.each do |peralatan| %>
+      <tr>
+        <td><%= peralatan.category_product_id %></td>
+        <td><%= peralatan.availability_product_id %></td>
+        <td><%= peralatan.aksesori_id %></td>
+        <td><%= peralatan.name %></td>
+        <td><%= peralatan.slug %></td>
+        <td><%= peralatan.peralatan_description %></td>
+        <td><%= peralatan.peralatan_kelengkapan %></td>
+        <td><%= peralatan.price %></td>
+        <td><%= peralatan.review_video %></td>
+        <td><%= peralatan.image1 %></td>
+        <td><%= peralatan.image2 %></td>
+        <td><%= peralatan.image3 %></td>
+        <td><%= peralatan.image4 %></td>
+        <td><%= peralatan.image5 %></td>
+        <td><%= link_to 'Show', peralatan %></td>
+        <td><%= link_to 'Edit', edit_peralatan_path(peralatan) %></td>
+        <td><%= link_to 'Destroy', peralatan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Peralatan', new_peralatan_path %>

@@ -1,4 +1,4 @@
-class Accessorie < ApplicationRecord
+class Peralatan < ApplicationRecord
     extend FriendlyId
     friendly_id :name, use: :slugged
 

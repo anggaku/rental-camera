@@ -10,30 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190306221754) do
+ActiveRecord::Schema.define(version: 20190307060748) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "accessories", force: :cascade do |t|
-    t.integer "category_product_id"
-    t.integer "availability_product_id"
-    t.integer "aksesori_id"
-    t.string "name"
-    t.string "slug"
-    t.text "accessorie_description"
-    t.text "accessorie_kelengkapan"
-    t.decimal "price"
-    t.string "review_video"
-    t.string "image1"
-    t.string "image2"
-    t.string "image3"
-    t.string "image4"
-    t.string "image5"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["slug"], name: "index_accessories_on_slug", unique: true
-  end
 
   create_table "aksesoris", force: :cascade do |t|
     t.string "name"
@@ -194,6 +174,26 @@ ActiveRecord::Schema.define(version: 20190306221754) do
     t.string "status_sewa"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "peralatans", force: :cascade do |t|
+    t.integer "category_product_id"
+    t.integer "availability_product_id"
+    t.integer "aksesori_id"
+    t.string "name"
+    t.string "slug"
+    t.text "peralatan_description"
+    t.text "peralatan_kelengkapan"
+    t.decimal "price"
+    t.string "review_video"
+    t.string "image1"
+    t.string "image2"
+    t.string "image3"
+    t.string "image4"
+    t.string "image5"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_peralatans_on_slug", unique: true
   end
 
   create_table "products", force: :cascade do |t|

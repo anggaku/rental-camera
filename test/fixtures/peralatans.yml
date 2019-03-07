@@ -6,8 +6,8 @@ one:
   aksesori_id: 1
   name: MyString
   slug: MyString
-  accessorie_description: MyText
-  accessorie_kelengkapan: MyText
+  peralatan_description: MyText
+  peralatan_kelengkapan: MyText
   price: 9.99
   review_video: MyString
   image1: MyString
@@ -22,8 +22,8 @@ two:
   aksesori_id: 1
   name: MyString
   slug: MyString
-  accessorie_description: MyText
-  accessorie_kelengkapan: MyText
+  peralatan_description: MyText
+  peralatan_kelengkapan: MyText
   price: 9.99
   review_video: MyString
   image1: MyString

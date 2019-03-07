@@ -2,5 +2,5 @@ class Aksesori < ApplicationRecord
     extend FriendlyId
     friendly_id :name, use: :slugged
 
-    has_many :accessories
+    has_many :peralatans
 end

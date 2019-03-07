@@ -4,5 +4,5 @@ class AvailabilityProduct < ApplicationRecord
     
     has_many :cameras
     has_many :lensas
-    has_many :accessories
+    has_many :peralatans
 end

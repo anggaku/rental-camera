@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :accessories
+  resources :peralatans
   resources :lensas
   resources :cameras
   resources :merk_cameras
